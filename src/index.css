@@ -1,0 +1,106 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 271 81% 25%;
+    --primary-light: 271 81% 35%;
+    --primary-dark: 271 81% 15%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 273 75% 58%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-primary-dark via-primary to-accent/50 min-h-screen text-foreground antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .hover-card {
+    @apply hover:-translate-y-1 hover:border-accent/50;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-display font-bold mb-8 relative inline-block;
+    &::after {
+      content: '';
+      @apply absolute -bottom-2 left-0 w-2/3 h-1 bg-accent/30 rounded-full;
+    }
+  }
+
+  .skill-pill {
+    @apply px-3 py-1.5 rounded-full text-sm bg-white/10 hover:bg-white/20 transition-colors;
+  }
+
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground transition-colors text-sm md:text-base;
+    &::after {
+      content: '';
+      @apply absolute -bottom-1 left-0 w-full h-0.5 bg-accent scale-x-0 origin-right transition-transform;
+    }
+    &:hover::after {
+      @apply scale-x-100 origin-left;
+    }
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-primary-light to-accent text-primary-foreground hover:opacity-90 transition-all hover:scale-[1.02] active:scale-100;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/20 hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-100;
+  }
+}
+
+@keyframes borderAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-border {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, var(--accent), var(--primary-light), var(--accent));
+    background-size: 200% 200%;
+    animation: borderAnimation 4s ease infinite;
+    border-radius: calc(var(--radius) + 2px);
+    z-index: -1;
+  }
+}
