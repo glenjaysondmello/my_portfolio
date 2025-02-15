@@ -1,5 +1,5 @@
-
 import { ArrowRight } from "lucide-react";
+import profile from "../assets/profile.jpeg";
 
 const Hero = () => {
   return (
@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container px-4 sm:px-6 py-12">
         <div className="text-center space-y-6 animate-fade-up">
           <img
-            src="/profile.jpeg" 
+            src={profile}
             alt="Profile"
             className="w-36 h-36 rounded-full object-cover mx-auto shadow-lg animated-border"
           />
