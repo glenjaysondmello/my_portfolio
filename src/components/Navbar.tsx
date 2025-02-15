@@ -1,10 +1,12 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { quantum } from "ldrs";
+// import Loader from "./3D_animation/Loader";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  quantum.register();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +24,12 @@ const Navbar = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <span className="text-xl font-display font-bold">Glen Jayson Dmello</span>
-          
+          <l-quantum size="45" speed="1.5" color="white"></l-quantum>
+          {/* <Loader/> */}
+          <span className="text-xl font-display font-bold">
+            Glen Jayson Dmello
+          </span>
+
           {/* Mobile menu button */}
           <button
             className="md:hidden"
@@ -35,31 +41,35 @@ const Navbar = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex gap-8">
-            {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="nav-link"
-              >
-                {item}
-              </a>
-            ))}
+            {["About", "Skills", "Projects", "Contact"].map(
+              (item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="nav-link"
+                >
+                  {item}
+                </a>
+              )
+            )}
           </div>
 
           {/* Mobile menu */}
           {isOpen && (
             <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b md:hidden animate-fade-down">
               <div className="container mx-auto px-6 py-4">
-                {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="block py-2 nav-link"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item}
-                  </a>
-                ))}
+                {["About", "Skills", "Experience", "Projects", "Contact"].map(
+                  (item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className="block py-2 nav-link"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item}
+                    </a>
+                  )
+                )}
               </div>
             </div>
           )}
@@ -70,3 +80,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// Default values shown
+
+// Default values shown
+
+
