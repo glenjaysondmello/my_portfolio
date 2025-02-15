@@ -18,7 +18,7 @@ const Hero = () => {
             MERN Stack Developer
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
-            Full-Stack Innovator | Tech Enthusiast
+            Full-Stack Innovator | Prompt Engineer | Tech Enthusiast 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <a href="#contact" className="button-primary">
