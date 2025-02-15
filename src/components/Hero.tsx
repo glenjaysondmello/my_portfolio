@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import profile from "../assets/profile.jpeg";
+import profile from "/profile.jpeg";
 
 const Hero = () => {
   return (
