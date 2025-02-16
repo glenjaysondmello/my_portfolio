@@ -11,15 +11,12 @@ const Contact = () => {
         <h2 className="section-title">Let's Connect!</h2>
         <div className="glass-card p-8 max-w-2xl mx-auto text-center space-y-8 animate-fade-up hover-card">
           <p className="text-lg text-white/90">
-            I am always open to discussing tech innovations, web development, and
-            collaborative projects. Feel free to reach out!
+            I am always open to discussing tech innovations, web development,
+            and collaborative projects. Feel free to reach out!
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <a
-              href="mailto:glendmello04@gmail.com"
-              className="button-primary"
-            >
-              <Mail size={32} />
+            <a href="mailto:glendmello04@gmail.com" className="button-primary">
+              <Mail size={20} />
               <span>Email</span>
             </a>
             <a
@@ -28,7 +25,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-secondary"
             >
-              <UseAnimations animation={github} size={44} strokeColor="white"/>
+              <UseAnimations animation={github} size={28} strokeColor="white" />
               <span>GitHub</span>
             </a>
             <a
@@ -37,7 +34,11 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-secondary"
             >
-              <UseAnimations animation={linkedin} size={44} strokeColor="white"/>
+              <UseAnimations
+                animation={linkedin}
+                size={28}
+                strokeColor="white"
+              />
               <span>LinkedIn</span>
             </a>
             <a
@@ -46,7 +47,11 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-secondary"
             >
-              <UseAnimations animation={instagram} size={44} strokeColor="white"/>
+              <UseAnimations
+                animation={instagram}
+                size={28}
+                strokeColor="white"
+              />
               <span>Instagram</span>
             </a>
           </div>
