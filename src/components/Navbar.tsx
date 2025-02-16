@@ -23,10 +23,12 @@ const Navbar = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <l-quantum size="45" speed="1.5" color="white"></l-quantum>
-          <span className="text-xl font-display font-bold">
-            Glen Jayson Dmello
-          </span>
+          <div className="flex items-center gap-12">
+            <l-quantum size="45" speed="1.5" color="white"></l-quantum>
+            <span className="text-xl font-display font-bold">
+              Glen Jayson Dmello
+            </span>
+          </div>
 
           {/* Mobile menu button */}
           <button
