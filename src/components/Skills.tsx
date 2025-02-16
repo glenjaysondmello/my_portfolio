@@ -18,6 +18,8 @@ const SKILLS = {
     { name: "Tailwind CSS", icon: <SiTailwindcss size={18} className="text-blue-500" /> },
     { name: "TypeScript", icon: <IoCodeSlash size={18} className="text-blue-600" /> },
     { name: "JavaScript", icon: <IoCodeSlash size={18} className="text-yellow-400" /> },
+    { name: "HTML", icon: <FaHtml5 size={18} className="text-orange-500" /> },
+    { name: "CSS", icon: <FaCss3Alt size={18} className="text-blue-500" /> },
   ],
   Backend: [
     { name: "Node.js", icon: <FaNodeJs size={18} className="text-green-500" /> },
@@ -32,8 +34,6 @@ const SKILLS = {
     { name: "Postman API", icon: <SiPostman size={18} className="text-orange-500" /> },
     { name: "Python", icon: <FaPython size={18} className="text-blue-400" /> },
     { name: "Java", icon: <FaJava size={18} className="text-red-600" /> },
-    { name: "HTML", icon: <FaHtml5 size={18} className="text-orange-500" /> },
-    { name: "CSS", icon: <FaCss3Alt size={18} className="text-blue-500" /> },
     { name: "Prompt Engineering", icon: <IoTerminal size={18} className="text-gray-500" /> },
   ],
 };

@@ -1,5 +1,8 @@
-import { Github, Linkedin, Mail, Instagram } from "lucide-react";
-import SkillLoader from "./3D_animation/SkillLoader";
+import { Mail } from "lucide-react";
+import UseAnimations from "react-useanimations";
+import github from "react-useanimations/lib/github";
+import linkedin from "react-useanimations/lib/linkedin";
+import instagram from "react-useanimations/lib/instagram";
 
 const Contact = () => {
   return (
@@ -16,7 +19,7 @@ const Contact = () => {
               href="mailto:glendmello04@gmail.com"
               className="button-primary"
             >
-              <Mail size={20} />
+              <Mail size={32} />
               <span>Email</span>
             </a>
             <a
@@ -25,7 +28,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-secondary"
             >
-              <Github size={20} />
+              <UseAnimations animation={github} size={44} strokeColor="white"/>
               <span>GitHub</span>
             </a>
             <a
@@ -34,7 +37,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-secondary"
             >
-              <Linkedin size={20} />
+              <UseAnimations animation={linkedin} size={44} strokeColor="white"/>
               <span>LinkedIn</span>
             </a>
             <a
@@ -43,7 +46,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-secondary"
             >
-              <Instagram size={20} />
+              <UseAnimations animation={instagram} size={44} strokeColor="white"/>
               <span>Instagram</span>
             </a>
           </div>
