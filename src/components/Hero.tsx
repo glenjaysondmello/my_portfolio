@@ -12,13 +12,13 @@ const Hero = () => {
             className="w-36 h-36 rounded-full object-cover mx-auto shadow-lg animated-border"
           />
           <div className="inline-block glass-card px-3 py-1 text-sm">
-            He/Him
+            Tech Enthusiast
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
             MERN Stack Developer
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
-            Full-Stack Innovator | Prompt Engineer | Tech Enthusiast 
+            Full-Stack Innovator | Prompt Engineer
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <a href="#contact" className="button-primary">
