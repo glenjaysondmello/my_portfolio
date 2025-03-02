@@ -95,8 +95,6 @@ const About = () => {
               <p className="text-white/70">Maryvale High School</p>
               <p className="text-white/70">8th - 10th</p>
             </div>
-
-            <hr className="border-white/30 my-4" />
           </div>
         </div>
       </div>

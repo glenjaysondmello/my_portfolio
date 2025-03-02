@@ -36,12 +36,14 @@
 @layer base {
   * {
     @apply border-border;
-    backface-visibility: hidden;
+    transform: translateZ();
+    scroll-behavior: smooth;
   }
 
   body {
     background: radial-gradient(circle at center, #1a1a42, #06060f);
     color: white;
+    overflow-x: hidden;
     overscroll-behavior: none;
     font-family: "Aileron";
   }

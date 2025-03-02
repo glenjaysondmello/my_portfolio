@@ -78,17 +78,13 @@ const SKILLS = {
   ],
   "Tools & Others": [
     { name: "Git", icon: <FaGitAlt size={18} className="text-orange-500" /> },
-    { name: "Linux", icon: <SiLinux size={18} className="text-gray-500" /> },
+    { name: "Linux", icon: <SiLinux size={18} className="text-green-300" /> },
     {
       name: "Postman API",
       icon: <SiPostman size={18} className="text-orange-500" />,
     },
     { name: "Python", icon: <FaPython size={18} className="text-blue-400" /> },
     { name: "Java", icon: <FaJava size={18} className="text-red-600" /> },
-    {
-      name: "Prompt Engineering",
-      icon: <IoTerminal size={18} className="text-gray-500" />,
-    },
   ],
 };
 
