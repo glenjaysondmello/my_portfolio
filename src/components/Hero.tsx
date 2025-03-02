@@ -11,7 +11,7 @@ const Hero = () => {
             alt="Profile"
             className="w-36 h-36 rounded-full object-cover mx-auto shadow-lg animated-border"
           />
-          <div className="inline-block glass-card px-3 py-1 text-sm boxm">
+          <div className="inline-block px-3 py-1 text-sm box-mid">
             Tech Enthusiast
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
