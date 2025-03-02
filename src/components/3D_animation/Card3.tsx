@@ -15,7 +15,7 @@ const Card3 = () => {
             <button className="btn" />
           </div>
           <p className="user">glenjaysondmello@admin:~</p>
-          <div className="add_tab ml-4">+</div>
+          <div className="add_tab ml-2">+</div>
         </div>
 
         {/* Terminal Body */}
