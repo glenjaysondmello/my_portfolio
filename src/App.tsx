@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-// import SlowScroll from "./components/3D_animation/SlowScroll";
+import SlowScroll from "./components/3D_animation/SlowScroll";
 import "./App.css";
 
 const queryClient = new QueryClient();
@@ -15,7 +15,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {/* <SlowScroll /> */}
+      <SlowScroll />
       <BrowserRouter basename="/my_portfolio">
         <Routes>
           <Route path="/" element={<Index />} />

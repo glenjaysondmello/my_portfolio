@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const SlowScroll = () => {
   useEffect(() => {
-    let scrollSpeed = 5;
+    let scrollSpeed = 4;
     let scrollPosition = window.scrollY;
 
     const handleScroll = (event) => {
