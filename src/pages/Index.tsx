@@ -21,7 +21,9 @@ const Index = () => {
         <Card />
       </div>
       <Contact />
-      <Loader />
+      <div className="flex items-center justify-center mb-36">
+        <Loader />
+      </div>
     </div>
   );
 };

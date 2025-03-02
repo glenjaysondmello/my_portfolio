@@ -18,7 +18,10 @@ const Projects = () => {
         <h2 className="section-title">Projects & Achievements</h2>
         <div className="grid gap-6 lg:gap-8 animate-fade-up">
           {PROJECTS.map((project, index) => (
-            <div key={index} className="glass-card p-6 md:p-8 hover-card">
+            <div
+              key={index}
+              className="glass-card p-6 md:p-8 hover-card glowing-border"
+            >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
                 <div className="text-sm text-white/60">{project.year}</div>
@@ -32,11 +35,14 @@ const Projects = () => {
           ))}
 
           {/* GitHub Card */}
-          <div className="glass-card p-6 md:p-8 hover-card flex flex-col items-center text-center">
+          <div className="glass-card p-6 md:p-8 hover-card flex flex-col items-center text-center glowing-border">
             <FaGithub className="text-4xl text-white mb-3" />
-            <h3 className="text-xl font-semibold text-white">Explore More Projects</h3>
+            <h3 className="text-xl font-semibold text-white">
+              Explore More Projects
+            </h3>
             <p className="text-white/70 mt-2">
-              Check out my GitHub profile to see more of my work, contributions, and open-source projects.
+              Check out my GitHub profile to see more of my work, contributions,
+              and open-source projects.
             </p>
             <a
               href="https://github.com/glenjaysondmello"

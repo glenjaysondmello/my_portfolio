@@ -4,7 +4,7 @@ const About = () => {
       <div className="container px-4 sm:px-6">
         <h2 className="section-title">About Me</h2>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div className="space-y-6 animate-fade-up glass-card p-6 md:p-8">
+          <div className="space-y-6 animate-fade-up glass-card p-6 md:p-8 glowing-border">
             <p className="text-lg leading-relaxed text-white/90">
               As a passionate and results-driven MERN Stack Developer, I
               specialize in building intuitive, scalable, and secure web
@@ -62,7 +62,7 @@ const About = () => {
               </ul>
             </div>
           </div>
-          <div className="glass-card p-8 animate-fade-up delay-100 hover-card">
+          <div className="glass-card p-8 animate-fade-up delay-100 hover-card glowing-border">
             <h3 className="text-xl font-semibold mb-4">Education</h3>
             <div className="space-y-3">
               <p className="font-medium text-white/90">

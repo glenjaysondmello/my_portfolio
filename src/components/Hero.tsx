@@ -11,7 +11,7 @@ const Hero = () => {
             alt="Profile"
             className="w-36 h-36 rounded-full object-cover mx-auto shadow-lg animated-border"
           />
-          <div className="inline-block glass-card px-3 py-1 text-sm">
+          <div className="inline-block glass-card px-3 py-1 text-sm boxm">
             Tech Enthusiast
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
@@ -21,11 +21,11 @@ const Hero = () => {
             Full-Stack Innovator | Prompt Engineer
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <a href="#contact" className="button-primary">
+            <a href="#contact" className="button-primary boxl">
               Get in touch
               <ArrowRight size={18} />
             </a>
-            <a href="#projects" className="button-secondary">
+            <a href="#projects" className="button-secondary boxr">
               View projects
             </a>
           </div>

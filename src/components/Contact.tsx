@@ -9,7 +9,7 @@ const Contact = () => {
     <section id="contact" className="py-20">
       <div className="container px-4 sm:px-6">
         <h2 className="section-title">Let's Connect!</h2>
-        <div className="glass-card p-8 max-w-2xl mx-auto text-center space-y-8 animate-fade-up hover-card">
+        <div className="glass-card p-8 max-w-2xl mx-auto text-center space-y-8 animate-fade-up hover-card glowing-border">
           <p className="text-lg text-white/90">
             I am always open to discussing tech innovations, web development,
             and collaborative projects. Feel free to reach out!

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { quantum } from "ldrs";
-import Universe from "./3D_animation/Universe";
 import Loader1 from "./3D_animation/Loader1";
 
 const Navbar = () => {
@@ -35,7 +34,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden"
+            className="md:hidden mr-8"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -43,7 +42,7 @@ const Navbar = () => {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-8 mr-8">
             {["About", "Skills", "Projects", "Contact"].map((item) => (
               <a
                 key={item}

@@ -99,7 +99,10 @@ const Skills = () => {
         <h2 className="section-title">Technical Skills</h2>
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 animate-fade-up">
           {Object.entries(SKILLS).map(([category, skills]) => (
-            <div key={category} className="glass-card p-6 md:p-8 hover-card">
+            <div
+              key={category}
+              className="glass-card p-6 md:p-8 hover-card glowing-border"
+            >
               <h3 className="text-lg font-semibold mb-4">{category}</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map(({ name, icon }) => (
