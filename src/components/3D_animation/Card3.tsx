@@ -14,7 +14,7 @@ const Card3 = () => {
             <button className="btn" />
             <button className="btn" />
           </div>
-          <p className="user">00Kubi@admin: ~</p>
+          <p className="user">glenjaysondmello@admin: ~</p>
           <div className="add_tab">+</div>
         </div>
 
