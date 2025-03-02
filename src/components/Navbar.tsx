@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { quantum } from "ldrs";
+import Universe from "./3D_animation/Universe";
+import Loader1 from "./3D_animation/Loader1";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +26,8 @@ const Navbar = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-12">
-            <l-quantum size="45" speed="1.5" color="white"></l-quantum>
+            {/* <l-quantum size="45" speed="1.5" color="white"></l-quantum> */}
+            <Loader1 />
             <span className="text-xl font-display font-bold">
               Glen Jayson Dmello
             </span>

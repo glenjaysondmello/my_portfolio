@@ -39,7 +39,8 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-primary-dark via-primary to-accent/50 min-h-screen text-foreground antialiased;
+    background: radial-gradient(circle at center, #1a1a42, #06060f);
+    color: white;
     overscroll-behavior: none;
     font-family: "Aileron";
   }
