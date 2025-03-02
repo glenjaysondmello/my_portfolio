@@ -34,7 +34,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden mr-8"
+            className="md:hidden mr-5"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
