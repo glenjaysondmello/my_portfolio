@@ -26,15 +26,13 @@ const About = () => {
                   Version control and collaboration using Git, ensuring clean,
                   maintainable, and well-documented code.
                 </li>
+
                 <li>
-                  Linux proficiency, leveraging CLI tools, shell scripting, and
-                  system administration for optimized development workflows.
+                  Proficient in AI interaction and prompt engineering,
+                  leveraging effective communication with AI to refine
+                  responses.
                 </li>
-                <li>
-                  AI interaction & prompt engineering, effectively utilizing AI
-                  tools, refining model interactions, and optimizing responses
-                  for better automation and user engagement.
-                </li>
+
                 <li>
                   Building scalable and secure applications, prioritizing
                   performance, data protection, and user experience.
@@ -47,9 +45,8 @@ const About = () => {
               </h3>
               <ul className="space-y-3 list-disc list-inside text-white/70">
                 <li>
-                  Expertise in AI tools, effectively integrating them into
-                  workflows for automation, decision-making, and enhanced user
-                  experiences.
+                  Skilled in prompt engineering, effectively communicating with
+                  AI to generate optimal responses and solutions.
                 </li>
                 <li>
                   Hackfest'24 Finalist – My team, Epsilon, ranked among the top
@@ -100,7 +97,6 @@ const About = () => {
             </div>
 
             <hr className="border-white/30 my-4" />
-            
           </div>
         </div>
       </div>

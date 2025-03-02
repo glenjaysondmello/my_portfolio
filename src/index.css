@@ -1,7 +1,6 @@
-
-@import "@fontsource/aileron"; 
-@import "@fontsource/aileron/400.css"; 
-@import "@fontsource/aileron/400-italic.css"; 
+@import "@fontsource/aileron";
+@import "@fontsource/aileron/400.css";
+@import "@fontsource/aileron/400-italic.css";
 
 @tailwind base;
 @tailwind components;
