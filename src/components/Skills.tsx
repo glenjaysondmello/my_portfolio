@@ -19,7 +19,7 @@ import {
   SiPostman,
   SiLinux,
 } from "react-icons/si";
-import { IoTerminal, IoCodeSlash, IoServer } from "react-icons/io5";
+import { IoTerminal, IoCodeSlash, IoServer, IoCloud } from "react-icons/io5";
 
 const SKILLS = {
   "Industry Knowledge": [
@@ -85,6 +85,10 @@ const SKILLS = {
     },
     { name: "Python", icon: <FaPython size={18} className="text-blue-400" /> },
     { name: "Java", icon: <FaJava size={18} className="text-red-600" /> },
+    {
+      name: "Cloudinary",
+      icon: <IoCloud size={18} className="text-blue-500" />,
+    },
   ],
 };
 

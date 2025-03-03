@@ -17,16 +17,19 @@ const Index = () => {
       <div className="mt-40">
         <Card3 />
       </div>
+      <div className="flex items-center justify-center mt-32">
+        <Card />
+      </div>
       <About />
       <Skills />
       <Projects />
       <div className="flex items-center justify-center">
-        <Card />
-      </div>
-      <Contact />
-      <div className="flex items-center justify-center mb-[50rem]">
         <Card1 />
       </div>
+      <div className="mb-[50rem]">
+        <Contact />
+      </div>
+
       <div className="flex items-center justify-center mb-96">
         <Tooltip />
       </div>

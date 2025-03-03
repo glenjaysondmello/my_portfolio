@@ -3,8 +3,8 @@ const About = () => {
     <section id="about" className="py-20">
       <div className="container px-4 sm:px-6">
         <h2 className="section-title">About Me</h2>
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <div className="space-y-6 animate-fade-up glass-card p-6 md:p-8 glowing-border">
+        <div className="space-y-6 animate-fade-up hover-card p-6 md:p-8 bg-[#1b1b1b] rounded-md mb-10 box-mid">
+          <div className="space-y-4">
             <p className="text-lg leading-relaxed text-white/90">
               As a passionate and results-driven MERN Stack Developer, I
               specialize in building intuitive, scalable, and secure web
@@ -13,6 +13,10 @@ const About = () => {
               front-end creativity with back-end efficiency to deliver
               high-performance solutions.
             </p>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="space-y-6 animate-fade-up p-6 md:p-8 hover-card bg-[#1b1b1b] rounded-md box-mid">
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">
                 My skill set extends to:
@@ -39,6 +43,8 @@ const About = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="p-8 animate-fade-up delay-100 hover-card box bg-[#1b1b1b] rounded-md pb-10 box-mid">
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">
                 Highlights of my journey:
@@ -60,40 +66,6 @@ const About = () => {
                   transformative ideas.
                 </li>
               </ul>
-            </div>
-          </div>
-          <div className="glass-card p-8 animate-fade-up delay-100 hover-card glowing-border">
-            <h3 className="text-xl font-semibold mb-4">Education</h3>
-            <div className="space-y-3">
-              <p className="font-medium text-white/90">
-                Bachelor of Technology (B.Tech)
-              </p>
-              <p className="text-white/70">Computer Science Engineering</p>
-              <p className="text-white/70">
-                St. Joseph Engineering College, Mangaluru
-              </p>
-              <p className="text-sm text-white/60">2022 - 2026</p>
-            </div>
-
-            <hr className="border-white/30 my-4" />
-
-            <div className="space-y-3">
-              <p className="font-medium text-white/90">
-                Pre-University Course (PUC) - Science, PCMC
-              </p>
-              <p className="text-white/70">
-                Pompei College, Talipady, Aikala Post, Kinnigoli-574141
-              </p>
-            </div>
-
-            <hr className="border-white/30 my-4" />
-
-            <div className="space-y-3">
-              <p className="font-medium text-white/90">
-                Secondary School Leaving Certificate (SSLC)
-              </p>
-              <p className="text-white/70">Maryvale High School</p>
-              <p className="text-white/70">8th - 10th</p>
             </div>
           </div>
         </div>

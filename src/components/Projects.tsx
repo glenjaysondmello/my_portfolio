@@ -20,7 +20,7 @@ const Projects = () => {
           {PROJECTS.map((project, index) => (
             <div
               key={index}
-              className="glass-card p-6 md:p-8 hover-card glowing-border"
+              className="p-6 md:p-8 hover-card box-mid bg-[#1b1b1b] rounded-md"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -35,7 +35,7 @@ const Projects = () => {
           ))}
 
           {/* GitHub Card */}
-          <div className="glass-card p-6 md:p-8 hover-card flex flex-col items-center text-center glowing-border">
+          <div className="p-6 md:p-8 hover-card flex flex-col items-center text-center box-mid bg-[#1b1b1b] rounded-md">
             <FaGithub className="text-4xl text-white mb-3" />
             <h3 className="text-xl font-semibold text-white">
               Explore More Projects

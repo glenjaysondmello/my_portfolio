@@ -43,7 +43,9 @@ const Card3 = () => {
               <h3>Tech Enthusiast</h3>
             </div>
             <h1 className="title">MERN Stack Developer</h1>
-            <p className="subtitle">Full-Stack Innovator | Prompt Engineer</p>
+            <p className="subtitle">
+              Full-Stack Innovator | Aspiring AI Prompt Engineer
+            </p>
             <div className="buttons">
               <a href="#contact" className="button-primary boxl mb-5">
                 Get in touch <ArrowRight size={18} />
