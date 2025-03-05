@@ -32,9 +32,8 @@ const About = () => {
                 </li>
 
                 <li>
-                  Proficient in AI interaction and prompt engineering,
-                  leveraging effective communication with AI to refine
-                  responses.
+                  AI interaction and prompt engineering, leveraging effective
+                  communication with AI to refine responses.
                 </li>
 
                 <li>
@@ -50,10 +49,6 @@ const About = () => {
                 Highlights of my journey:
               </h3>
               <ul className="space-y-3 list-disc list-inside text-white/70">
-                <li>
-                  Skilled in prompt engineering, effectively communicating with
-                  AI to generate optimal responses and solutions.
-                </li>
                 <li>
                   Hackfest'24 Finalist – My team, Epsilon, ranked among the top
                   93 out of 2,500 teams nationally, showcasing problem-solving
