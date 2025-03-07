@@ -4,10 +4,9 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import Card from "@/components/3D_animation/Card";
-import Card1 from "@/components/3D_animation/Card1";
 import Card3 from "@/components/3D_animation/Card3";
 import Tooltip from "@/components/3D_animation/Tooltip";
+import SkillLoader from "@/components/3D_animation/SkillLoader";
 
 const Index = () => {
   return (
@@ -17,16 +16,17 @@ const Index = () => {
       <div className="mt-40">
         <Card3 />
       </div>
-      <div className="flex items-center justify-center mt-32">
-        <Card />
-      </div>
+
       <About />
       <Skills />
       <Projects />
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <Card1 />
+      </div> */}
+      <div className="flex items-center justify-center">
+        <SkillLoader />
       </div>
-      <div className="mb-[50rem]">
+      <div className="mb-96">
         <Contact />
       </div>
 

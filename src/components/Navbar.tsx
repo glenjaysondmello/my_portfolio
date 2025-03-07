@@ -22,7 +22,7 @@ const Navbar = () => {
         isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : ""
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-12">
             {/* <l-quantum size="45" speed="1.5" color="white"></l-quantum> */}
