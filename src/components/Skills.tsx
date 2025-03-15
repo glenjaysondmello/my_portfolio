@@ -1,124 +1,46 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaPython,
-  FaJava,
-  FaDatabase,
-  FaCss3Alt,
-  FaHtml5,
-  FaRobot,
-} from "react-icons/fa";
-import {
-  SiRedux,
-  SiTailwindcss,
-  SiFirebase,
-  SiMongodb,
-  SiMysql,
-  SiPostman,
-  SiLinux,
-} from "react-icons/si";
-import { IoTerminal, IoCodeSlash, IoServer, IoCloud } from "react-icons/io5";
+import React from "react";
+import firebase from "/firebase-svgrepo-com.svg";
 
-const SKILLS = {
-  "Industry Knowledge": [
-    {
-      name: "Full-Stack Web Development (MERN)",
-      icon: <IoCodeSlash size={18} />,
-    },
-    {
-      name: "RESTful APIs & Backend Development",
-      icon: <IoServer size={18} />,
-    },
-    {
-      name: "AI Interaction & Prompt Engineering",
-      icon: <FaRobot size={18} />,
-    },
-  ],
-  Frontend: [
-    { name: "React.js", icon: <FaReact size={18} className="text-blue-400" /> },
-    {
-      name: "Redux.js",
-      icon: <SiRedux size={18} className="text-purple-500" />,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss size={18} className="text-blue-500" />,
-    },
-    {
-      name: "TypeScript",
-      icon: <IoCodeSlash size={18} className="text-blue-600" />,
-    },
-    {
-      name: "JavaScript",
-      icon: <IoCodeSlash size={18} className="text-yellow-400" />,
-    },
-    { name: "HTML", icon: <FaHtml5 size={18} className="text-orange-500" /> },
-    { name: "CSS", icon: <FaCss3Alt size={18} className="text-blue-500" /> },
-  ],
-  Backend: [
-    {
-      name: "Node.js",
-      icon: <FaNodeJs size={18} className="text-green-500" />,
-    },
-    {
-      name: "Express.js",
-      icon: <IoServer size={18} className="text-gray-400" />,
-    },
-    {
-      name: "Firebase",
-      icon: <SiFirebase size={18} className="text-yellow-500" />,
-    },
-    {
-      name: "MongoDB",
-      icon: <SiMongodb size={18} className="text-green-500" />,
-    },
-    { name: "MySQL", icon: <SiMysql size={18} className="text-blue-600" /> },
-  ],
-  "Tools & Others": [
-    { name: "Git", icon: <FaGitAlt size={18} className="text-orange-500" /> },
-    { name: "Linux", icon: <SiLinux size={18} className="text-green-300" /> },
-    {
-      name: "Postman API",
-      icon: <SiPostman size={18} className="text-orange-500" />,
-    },
-    { name: "Python", icon: <FaPython size={18} className="text-blue-400" /> },
-    { name: "Java", icon: <FaJava size={18} className="text-red-600" /> },
-    {
-      name: "Cloudinary",
-      icon: <IoCloud size={18} className="text-blue-500" />,
-    },
-  ],
-};
+const skills = [
+  { name: "React.js", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+  { name: "Tailwind CSS", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+  { name: "TypeScript", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
+  { name: "JavaScript", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
+  { name: "Node.js", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
+  { name: "Express.js", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" },
+  { name: "Firebase", imgSrc: firebase },
+  { name: "MongoDB", imgSrc: "https://upload.wikimedia.org/wikipedia/en/4/45/MongoDB-Logo.svg" },
+  { name: "MySQL", imgSrc: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" },
+  { name: "Git", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" },
+  { name: "Linux", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" },
+  { name: "Postman API", imgSrc: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+  { name: "Python", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
+  { name: "Java", imgSrc: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" },
+];
+
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20">
-      <div className="container px-4 sm:px-6">
-        <h2 className="section-title">Technical Skills</h2>
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 animate-fade-up">
-          {Object.entries(SKILLS).map(([category, skills]) => (
-            <div
-              key={category}
-              className="glass-card p-6 md:p-8 hover-card glowing-border"
-            >
-              <h3 className="text-lg font-semibold mb-4">{category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map(({ name, icon }) => (
-                  <Badge
-                    key={name}
-                    variant="secondary"
-                    className="bg-white/10 hover:bg-white/20 transition-colors flex items-center gap-2 px-3 py-1"
-                  >
-                    {icon}
-                    {name}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+    <section id="skills" className="py-20 text-white text-center">
+      <h2 className="text-4xl font-bold text-orange-400 flex items-center justify-center gap-2">
+        <span className="text-gray-300 text-5xl">⚙️</span> Skills
+      </h2>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 mt-10">
+        {skills.map(({ name, imgSrc }) => (
+          <div
+            key={name}
+            className="relative group flex items-center justify-center"
+          >
+            <img
+              src={imgSrc}
+              alt={name}
+              className="w-14 h-14 object-contain transition-transform duration-300 group-hover:opacity-30"
+            />
+            <span className="absolute opacity-0 group-hover:opacity-100 text-white bg-black bg-opacity-75 text-lg font-bold px-3 py-1 rounded transition-opacity duration-300">
+              {name}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );
