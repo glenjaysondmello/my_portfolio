@@ -62,6 +62,13 @@
   .fastapi-green {
     filter: invert(33%) sepia(83%) saturate(370%) hue-rotate(140deg) brightness(92%) contrast(96%);
   }
+
+  .typing-text {
+    min-width: 220px; /* Ensures enough space for text */
+    display: inline-block; /* Prevents text wrapping issues */
+    text-align: center;
+  }
+  
   
   .button-glow {
     display: flex;
@@ -109,6 +116,7 @@
   .skill-pill {
     @apply px-3 py-1.5 rounded-full text-sm bg-white/10 hover:bg-white/20 transition-colors;
   }
+  
 
   .nav-link {
     @apply relative text-foreground/80 hover:text-foreground transition-colors text-sm md:text-base;

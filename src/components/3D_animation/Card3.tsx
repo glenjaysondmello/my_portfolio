@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { ArrowRight } from "lucide-react";
 import profile from "/profile.jpeg";
+import Typed from "typed.js";
+import Loader from "./Loader";
 
 const Card3 = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["MERN Stack Developer", "Full Stack Innovater", "Aspiring AI Prompt Engineer"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy(); // Clean up when the component unmounts
+    };
+  }, []);
+
+
   return (
     <StyledWrapper>
       <div className="container" id="home">
@@ -15,7 +33,7 @@ const Card3 = () => {
             <button className="btn" />
           </div>
           <p className="user">glenjaysondmello@admin:~</p>
-          <div className="add_tab ml-2">+</div>
+          <div className="add_tab ml-1">+</div>
         </div>
 
         {/* Terminal Body */}
@@ -42,18 +60,11 @@ const Card3 = () => {
             <div className="boxm">
               <h3>Tech Enthusiast</h3>
             </div>
-            <h1 className="title">MERN Stack Developer</h1>
-            <p className="subtitle">
-              Full-Stack Innovator | Aspiring AI Prompt Engineer
-            </p>
+            
             <div className="buttons">
-              <a href="#contact" className="button-primary boxl mb-5">
-                Get in touch <ArrowRight size={18} />
-              </a>
-              <a href="#projects" className="button-secondary boxr">
-                View projects
-              </a>
+              <Loader/>
             </div>
+            <h3 ref={typedRef} className="typing-text text-xl font-bold mt-5"></h3>
             <div className="mt-10">
               <p>📍 Dakshina Kannada, Karnataka, India</p>
             </div>
@@ -145,8 +156,12 @@ const StyledWrapper = styled.div`
 
   /* Hero Section Styles */
   .hero_section {
-    animation: fadeIn 1s ease-in-out;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keeps everything centered */
+  justify-content: center;
+  width: 100%; /* Ensures proper alignment */
+}
 
   .profile_img {
     width: 80px;
