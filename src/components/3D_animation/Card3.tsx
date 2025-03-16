@@ -6,7 +6,7 @@ import profile from "/profile.jpeg";
 const Card3 = () => {
   return (
     <StyledWrapper>
-      <div className="container">
+      <div className="container" id="home">
         {/* Terminal Toolbar */}
         <div className="terminal_toolbar">
           <div className="butt">
@@ -81,6 +81,10 @@ const StyledWrapper = styled.div`
     color: #e6e6e6;
     border-radius: 5px;
     overflow: hidden;
+   
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 
+                0 0 20px rgba(255, 255, 255, 0.1), 
+                0 0 30px rgba(255, 255, 255, 0.1);
   }
 
   .terminal_toolbar {

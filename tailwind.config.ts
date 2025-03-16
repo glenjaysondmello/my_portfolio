@@ -14,6 +14,7 @@ export default {
       },
     },
     extend: {
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -52,8 +53,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        display: ["Cal Sans", "Inter", "sans-serif"],
+        jetbrains: ["JetBrains Mono", "monospace"],
+        display: ["JetBrains Mono", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

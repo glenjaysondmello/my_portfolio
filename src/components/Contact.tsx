@@ -3,59 +3,76 @@ import UseAnimations from "react-useanimations";
 import github from "react-useanimations/lib/github";
 import linkedin from "react-useanimations/lib/linkedin";
 import instagram from "react-useanimations/lib/instagram";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="container px-4 sm:px-6">
-        <h2 className="section-title">Let's Connect!</h2>
-        <div className="p-8 max-w-2xl mx-auto text-center space-y-8 animate-fade-up hover-card box bg-[#1b1b1b] rounded-md">
+        <motion.h2
+          className="section-title text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          Let’s Connect!
+        </motion.h2>
+
+        <motion.div
+          className="p-8 max-w-2xl mx-auto text-center space-y-8 bg-white/10 backdrop-blur-md shadow-lg rounded-xl border border-white/20 animate-fade-up"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <p className="text-lg text-white/90">
-            I am always open to discussing tech innovations, web development,
-            and collaborative projects. Feel free to reach out!
+            I’m always open to discussing tech innovations, web development, and
+            collaborations. Feel free to reach out!
           </p>
+
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <a href="mailto:glendmello04@gmail.com" className="button-primary">
+            {/* Email */}
+            <a
+              href="mailto:glendmello04@gmail.com"
+              className="button-glow"
+            >
               <Mail size={20} />
               <span>Email</span>
             </a>
+
+            {/* GitHub */}
             <a
               href="https://github.com/glenjaysondmello"
               target="_blank"
               rel="noopener noreferrer"
-              className="button-secondary"
+              className="button-glow"
             >
               <UseAnimations animation={github} size={28} strokeColor="white" />
               <span>GitHub</span>
             </a>
+
+            {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/glen-jayson-dmello-927415251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href="https://www.linkedin.com/in/glen-jayson-dmello-927415251"
               target="_blank"
               rel="noopener noreferrer"
-              className="button-secondary"
+              className="button-glow"
             >
-              <UseAnimations
-                animation={linkedin}
-                size={28}
-                strokeColor="white"
-              />
+              <UseAnimations animation={linkedin} size={28} strokeColor="white" />
               <span>LinkedIn</span>
             </a>
+
+            {/* Instagram */}
             <a
-              href="https://www.instagram.com/_mello.d.glen_?igsh=M2ZiemMwcXY0eGdi"
+              href="https://www.instagram.com/_mello.d.glen_"
               target="_blank"
               rel="noopener noreferrer"
-              className="button-secondary"
+              className="button-glow"
             >
-              <UseAnimations
-                animation={instagram}
-                size={28}
-                strokeColor="white"
-              />
+              <UseAnimations animation={instagram} size={28} strokeColor="white" />
               <span>Instagram</span>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

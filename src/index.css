@@ -2,6 +2,11 @@
 @import "@fontsource/aileron/400.css";
 @import "@fontsource/aileron/400-italic.css";
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,7 +50,7 @@
     color: white;
     overflow-x: hidden;
     overscroll-behavior: none;
-    font-family: "Aileron";
+    font-family: 'JetBrains Mono', monospace;
   }
 
   html {
@@ -54,6 +59,37 @@
 }
 
 @layer components {
+  .fastapi-green {
+    filter: invert(33%) sepia(83%) saturate(370%) hue-rotate(140deg) brightness(92%) contrast(96%);
+  }
+  
+  .button-glow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4a90e2, #1464a3);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.2);
+  }
+  
+  .button-glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.6);
+  }
+  
+  .button-glow span {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .button-glow:hover span {
+    color: #e0f7ff;
+  }
+  
   .glass-card {
     @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300;
   }
