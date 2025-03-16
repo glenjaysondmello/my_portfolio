@@ -9,7 +9,11 @@ const Card3 = () => {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["MERN Stack Developer", "Full Stack Innovater", "Aspiring AI Prompt Engineer"],
+      strings: [
+        "MERN Stack Developer",
+        "Full Stack Innovater",
+        "Aspiring AI Prompt Engineer",
+      ],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1000,
@@ -21,10 +25,9 @@ const Card3 = () => {
     };
   }, []);
 
-
   return (
     <StyledWrapper>
-      <div className="container" id="home">
+      <div className="container -mt-4" id="home">
         {/* Terminal Toolbar */}
         <div className="terminal_toolbar">
           <div className="butt">
@@ -60,12 +63,15 @@ const Card3 = () => {
             <div className="boxm">
               <h3>Tech Enthusiast</h3>
             </div>
-            
+
             <div className="buttons">
-              <Loader/>
+              <Loader />
             </div>
-            <h3 ref={typedRef} className="typing-text text-xl font-bold mt-5"></h3>
-            <div className="mt-10">
+            <h3
+              ref={typedRef}
+              className="typing-text text-xl font-bold mt-2"
+            ></h3>
+            <div className="">
               <p>📍 Dakshina Kannada, Karnataka, India</p>
             </div>
           </div>
@@ -84,7 +90,8 @@ const StyledWrapper = styled.div`
 
   .container {
     max-width: 500px;
-    width: 90%;
+    max-height: 600px;
+    width: 50%;
     height: auto;
     background: #1e1e1e;
     font-family: Menlo, Consolas, monospace;
@@ -92,10 +99,9 @@ const StyledWrapper = styled.div`
     color: #e6e6e6;
     border-radius: 5px;
     overflow: hidden;
-   
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 
-                0 0 20px rgba(255, 255, 255, 0.1), 
-                0 0 30px rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+      0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1);
   }
 
   .terminal_toolbar {
@@ -156,12 +162,12 @@ const StyledWrapper = styled.div`
 
   /* Hero Section Styles */
   .hero_section {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Keeps everything centered */
-  justify-content: center;
-  width: 100%; /* Ensures proper alignment */
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps everything centered */
+    justify-content: center;
+    width: 100%; /* Ensures proper alignment */
+  }
 
   .profile_img {
     width: 80px;

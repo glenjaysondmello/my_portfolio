@@ -3,20 +3,19 @@ import { Menu, X } from "lucide-react";
 import { quantum } from "ldrs";
 import Loader1 from "./3D_animation/Loader1";
 
-const Navbar = ({ setCurrentIndex }: { setCurrentIndex: (index: number) => void }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  quantum.register();
 
   useEffect(() => {
+    quantum.register();
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const sections = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
     <header
@@ -44,14 +43,14 @@ const Navbar = ({ setCurrentIndex }: { setCurrentIndex: (index: number) => void 
 
           {/* Desktop menu */}
           <div className="hidden md:flex gap-8 mr-8">
-            {sections.map((item, index) => (
-              <button
+            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+              <a
                 key={item}
+                href={`#${item.toLowerCase()}`}
                 className="nav-link"
-                onClick={() => setCurrentIndex(index)} // Update section index
               >
                 {item}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -59,18 +58,18 @@ const Navbar = ({ setCurrentIndex }: { setCurrentIndex: (index: number) => void 
           {isOpen && (
             <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b md:hidden animate-fade-down">
               <div className="container mx-auto px-6 py-4">
-                {sections.map((item, index) => (
-                  <button
-                    key={item}
-                    className="block py-2 nav-link w-full text-left"
-                    onClick={() => {
-                      setCurrentIndex(index);
-                      setIsOpen(false); // Close menu after clicking
-                    }}
-                  >
-                    {item}
-                  </button>
-                ))}
+                {["Home", "About", "Skills", "Projects", "Contact"].map(
+                  (item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className="block py-2 nav-link"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item}
+                    </a>
+                  )
+                )}
               </div>
             </div>
           )}

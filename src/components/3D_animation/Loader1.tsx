@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
   .pyramid-loader {
     position: relative;
     width: 50px; /* Smaller Size */
-    height: 100px;
+    height: 65px;
     display: block;
     transform-style: preserve-3d;
     transform: rotateX(-20deg);

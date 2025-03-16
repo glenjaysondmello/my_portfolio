@@ -31,10 +31,7 @@ const Contact = () => {
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {/* Email */}
-            <a
-              href="mailto:glendmello04@gmail.com"
-              className="button-glow"
-            >
+            <a href="mailto:glendmello04@gmail.com" className="button-glow">
               <Mail size={20} />
               <span>Email</span>
             </a>
@@ -57,7 +54,11 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-glow"
             >
-              <UseAnimations animation={linkedin} size={28} strokeColor="white" />
+              <UseAnimations
+                animation={linkedin}
+                size={28}
+                strokeColor="white"
+              />
               <span>LinkedIn</span>
             </a>
 
@@ -68,12 +69,21 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-glow"
             >
-              <UseAnimations animation={instagram} size={28} strokeColor="white" />
+              <UseAnimations
+                animation={instagram}
+                size={28}
+                strokeColor="white"
+              />
               <span>Instagram</span>
             </a>
           </div>
         </motion.div>
       </div>
+      <p className="block lg:hidden mt-20 -mb-10 text-center text-white">
+        © {new Date().getFullYear()}{" "}
+        <span className="font-semibold text-blue-400">Glen Jayson Dmello</span>.
+        All rights reserved.
+      </p>
     </section>
   );
 };

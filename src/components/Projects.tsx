@@ -14,7 +14,7 @@ const PROJECTS = [
 const Projects = () => {
   return (
     <section id="projects" className="py-20">
-      <div className="container px-4 sm:px-6">
+      <div className="container px-4 md:px-6">
         <h2 className="section-title">Projects & Achievements</h2>
         <div className="grid gap-6 lg:gap-8 animate-fade-up">
           {PROJECTS.map((project, index) => (
@@ -22,7 +22,7 @@ const Projects = () => {
               key={index}
               className="p-6 md:p-8 hover-card box-mid bg-[#1b1b1b] rounded-md"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 md:max-w-fit">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
                 <div className="text-sm text-white/60">{project.year}</div>
               </div>
