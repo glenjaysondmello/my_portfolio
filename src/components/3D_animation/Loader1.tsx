@@ -20,7 +20,7 @@ const Loader1 = () => {
 const StyledWrapper = styled.div`
   .pyramid-loader {
     position: relative;
-    width: 50px; /* Smaller Size */
+    width: 30px; /* Smaller Size */
     height: 65px;
     display: block;
     transform-style: preserve-3d;

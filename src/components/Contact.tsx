@@ -79,11 +79,11 @@ const Contact = () => {
           </div>
         </motion.div>
       </div>
-      <p className="block lg:hidden mt-20 -mb-10 text-center text-white">
+      {/* <p className="block lg:hidden mt-20 -mb-10 text-center text-white">
         © {new Date().getFullYear()}{" "}
         <span className="font-semibold text-blue-400">Glen Jayson Dmello</span>.
         All rights reserved.
-      </p>
+      </p> */}
     </section>
   );
 };
