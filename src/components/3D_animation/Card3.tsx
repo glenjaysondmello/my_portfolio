@@ -11,7 +11,7 @@ const Card3 = () => {
     const typed = new Typed(typedRef.current, {
       strings: [
         "MERN Stack Developer",
-        "Full Stack Innovater",
+        "Full Stack Innovator",
         "Aspiring AI Prompt Engineer",
       ],
       typeSpeed: 100,
@@ -21,58 +21,60 @@ const Card3 = () => {
     });
 
     return () => {
-      typed.destroy(); // Clean up when the component unmounts
+      typed.destroy();
     };
   }, []);
 
   return (
     <StyledWrapper>
-      <div className="container -mt-4" id="home">
-        {/* Terminal Toolbar */}
-        <div className="terminal_toolbar">
-          <div className="butt">
-            <button className="btn btn-color" />
-            <button className="btn" />
-            <button className="btn" />
+      <div className="terminal-container">
+        <div className="terminal-toolbar">
+          <div className="buttons">
+            <div className="dot red" />
+            <div className="dot yellow" />
+            <div className="dot green" />
           </div>
-          <p className="user">glenjaysondmello@admin:~</p>
-          <div className="add_tab ml-1">+</div>
+          <p className="terminal-title">bash</p>
         </div>
-
-        {/* Terminal Body */}
-        <div className="terminal_body">
-          <div className="terminal_prompt">
-            <span className="terminal_user">glenjaysondmello@admin:</span>
-            <span className="terminal_location">~</span>
-            <span className="terminal_bling">$</span>
-            <span className="terminal_cursor" />
-          </div>
-          <div className="terminal_output">
-            <pre className="output_text">Welcome to My Portfolio</pre>
-          </div>
-          <div className="terminal_input">
-            <input
-              placeholder="Type a command..."
-              className="input_text"
-              type="text"
-            />
-          </div>
-          {/* Hero Component */}
-          <div className="hero_section">
-            <img src={profile} alt="Profile" className="profile_img" />
-            <div className="boxm">
-              <h3>Tech Enthusiast</h3>
+        <div className="container -mt-4" id="home">
+          {/* Terminal Body */}
+          <div className="terminal_body text-white p-4 rounded-md">
+            <div className="terminal_prompt text-green-400 inline-flex space-x-1 mt-4 mb-2">
+              <span className="terminal_user">glenjaysondmello@admin:</span>
+              <span className="terminal_location">~</span>
+              <span className="terminal_bling">$</span>
+              <span className="terminal_cursor mt-1"></span>
             </div>
 
-            <div className="buttons">
-              <Loader />
+            <div className="terminal_output mb-2">
+              <pre className="output_text text-white">
+                Welcome to My Portfolio
+              </pre>
             </div>
-            <h3
-              ref={typedRef}
-              className="typing-text text-xl font-bold mt-2"
-            ></h3>
-            <div className="">
-              <p>📍 Dakshina Kannada, Karnataka, India</p>
+            {/* Hero Component */}
+            <div className="hero_section flex flex-col items-center mt-4">
+              <img
+                src={profile}
+                alt="Profile"
+                className="profile_img w-24 h-24 rounded-full border-2 border-gray-400"
+              />
+              <div className="boxm mt-2">
+                <h3 className="text-white">Tech Enthusiast</h3>
+              </div>
+              <div className="buttons mt-2">
+                <Loader />
+              </div>
+              <div className="typing-container mt-2">
+                <h3
+                  ref={typedRef}
+                  className="typing-text text-xl font-bold text-white"
+                ></h3>
+              </div>
+              <div className="mt-2">
+                <p className="text-gray-400">
+                  📍 Dakshina Kannada, Karnataka, India
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -81,170 +83,79 @@ const Card3 = () => {
   );
 };
 
-// Styled Components
 const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
-  .container {
+  .terminal-container {
+    background: black;
+    color: white;
+    border-radius: 8px;
+    width: 100%;
     max-width: 500px;
-    max-height: 600px;
-    width: 50%;
-    height: auto;
-    background: #1e1e1e;
-    font-family: Menlo, Consolas, monospace;
-    font-size: 14px;
-    color: #e6e6e6;
-    border-radius: 5px;
-    overflow: hidden;
-
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
-      0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1);
+    font-family: monospace;
+    padding: 10px;
   }
 
-  .terminal_toolbar {
+  .terminal-toolbar {
     display: flex;
-    height: 30px;
-    align-items: center;
-    padding: 0 8px;
-    box-sizing: border-box;
-    background: #212121;
     justify-content: space-between;
-  }
-
-  .butt {
-    display: flex;
     align-items: center;
-  }
-
-  .btn {
-    margin-right: 5px;
-    height: 12px;
-    width: 12px;
-    border-radius: 100%;
-    background: linear-gradient(#7d7871 0%, #595953 100%);
-    box-shadow: 0px 0px 1px 0px #41403a, 0px 1px 1px 0px #474642;
-  }
-
-  .btn-color {
-    background: #ee411a;
-  }
-
-  .add_tab {
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 0 6px;
-    border-radius: 4px 4px 0 0;
-    border-bottom: none;
-    cursor: pointer;
-  }
-
-  .user {
-    color: #d5d0ce;
-    margin-left: 6px;
-    font-size: 14px;
-    line-height: 15px;
-  }
-
-  .terminal_body {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    font-size: 12px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Hero Section Styles */
-  .hero_section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Keeps everything centered */
-    justify-content: center;
-    width: 100%; /* Ensures proper alignment */
-  }
-
-  .profile_img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
-  }
-
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    margin: 8px 0;
-  }
-
-  .subtitle {
-    font-size: 14px;
-    color: #aaaaaa;
+    padding: 8px;
+    background: #212121;
+    border-radius: 8px 8px 0 0;
   }
 
   .buttons {
-    margin-top: 12px;
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .button-primary,
-  .button-secondary {
-    padding: 8px 14px;
-    border-radius: 4px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
     gap: 5px;
-    font-size: 14px;
   }
 
-  .button-primary {
-    background: #007bff;
-    color: white;
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
   }
 
-  .button-secondary {
-    background: #3a3a3a;
-    color: white;
+  .red {
+    background: red;
+  }
+  .yellow {
+    background: yellow;
+  }
+  .green {
+    background: green;
+  }
+
+  .terminal-body {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 8px 8px;
+  }
+
+  .hero-section {
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .typing-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1eff8e;
+    margin-top: 10px;
   }
 
   .location {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #bbbbbb;
-  }
-
-  .terminal_prompt {
-    display: flex;
-    align-items: center;
-    padding: 4px;
-  }
-
-  .terminal_prompt span {
-    margin-left: 4px;
-  }
-
-  .terminal_user {
-    color: #1eff8e;
-  }
-
-  .terminal_location {
-    color: #4878c0;
-  }
-
-  .terminal_bling {
-    color: #dddddd;
+    color: gray;
+    font-size: 0.9rem;
+    margin-top: 8px;
   }
 
   .terminal_cursor {
@@ -253,94 +164,6 @@ const StyledWrapper = styled.div`
     width: 5px;
     margin-left: 10px;
     animation: curbl 1200ms linear infinite;
-  }
-
-  .terminal_output {
-    padding: 4px;
-    flex-grow: 1;
-    overflow-y: auto;
-  }
-
-  .output_text {
-    margin: 0;
-  }
-
-  .terminal_input {
-    padding: 4px;
-  }
-
-  .input_text {
-    width: 100%;
-    padding: 6px;
-    background: transparent;
-    border: none;
-    color: #e6e6e6;
-    caret-color: #1eff8e;
-  }
-
-  @keyframes curbl {
-    0% {
-      background: #ffffff;
-    }
-
-    49% {
-      background: #ffffff;
-    }
-
-    60% {
-      background: transparent;
-    }
-
-    99% {
-      background: transparent;
-    }
-
-    100% {
-      background: #ffffff;
-    }
-  }
-
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .container {
-      width: 100%;
-      max-width: 350px;
-    }
-
-    .profile_img {
-      width: 70px;
-      height: 70px;
-    }
-
-    .title {
-      font-size: 16px;
-    }
-
-    .subtitle {
-      font-size: 13px;
-    }
-
-    .buttons {
-      flex-direction: column;
-    }
-
-    .button-primary,
-    .button-secondary {
-      width: 100%;
-      justify-content: center;
-    }
-  }
-
-  /* Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 `;
 

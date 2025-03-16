@@ -58,9 +58,26 @@
   }
 
   .typing-text {
-    min-width: 220px; /* Ensures enough space for text */
-    display: inline-block; /* Prevents text wrapping issues */
+    display: inline-block; /* Ensures it doesn't stretch unexpectedly */
+    min-height: 28px; /* Adjust based on your font size */
+    min-width: 250px; /* Prevents shrinking when text changes */
     text-align: center;
+    white-space: nowrap; /* Ensures text stays in one line */
+    overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .typing-text {
+      font-size: 14px; /* Reduce font size for smaller screens */
+    }
+  }
+
+  .typing-container {
+    min-height: 30px; /* Adjust height based on animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .button-glow {
