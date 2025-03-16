@@ -308,11 +308,24 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin-top: 8px;
   }
 
+  @keyframes curbl {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .terminal_cursor {
-    display: block;
+    display: inline-block;
     height: 14px;
     width: 5px;
-    margin-left: 10px;
-    animation: curbl 1200ms linear infinite;
+    background-color: #1eff8e; /* Green color for visibility */
+    margin-left: 5px;
+    animation: curbl 0.8s infinite;
   }
 `,Footer=()=>jsxRuntimeExports.jsx("footer",{className:"fixed bottom-0 left-0 w-full bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white text-center py-4 px-6 text-sm md:text-base shadow-lg",children:jsxRuntimeExports.jsxs("p",{className:"transition-all duration-300 hover:text-gray-300",children:["© ",new Date().getFullYear()," ",jsxRuntimeExports.jsx("span",{className:"font-semibold text-blue-400",children:"Glen Jayson Dmello"}),". All rights reserved."]})});var observerMap=new Map,RootIds=new WeakMap,rootId=0,unsupportedValue=void 0;function getRootId(a){return a?(RootIds.has(a)||(rootId+=1,RootIds.set(a,rootId.toString())),RootIds.get(a)):"0"}function optionsToId(a){return Object.keys(a).sort().filter(o=>a[o]!==void 0).map(o=>`${o}_${o==="root"?getRootId(a.root):a[o]}`).toString()}function createObserver(a){const o=optionsToId(a);let l=observerMap.get(o);if(!l){const c=new Map;let u;const p=new IntersectionObserver(d=>{d.forEach(b=>{var P;const E=b.isIntersecting&&u.some(N=>b.intersectionRatio>=N);a.trackVisibility&&typeof b.isVisible>"u"&&(b.isVisible=E),(P=c.get(b.target))==null||P.forEach(N=>{N(E,b)})})},a);u=p.thresholds||(Array.isArray(a.threshold)?a.threshold:[a.threshold||0]),l={id:o,observer:p,elements:c},observerMap.set(o,l)}return l}function observe(a,o,l={},c=unsupportedValue){if(typeof window.IntersectionObserver>"u"&&c!==void 0){const P=a.getBoundingClientRect();return o(c,{isIntersecting:c,target:a,intersectionRatio:typeof l.threshold=="number"?l.threshold:0,time:0,boundingClientRect:P,intersectionRect:P,rootBounds:P}),()=>{}}const{id:u,observer:p,elements:d}=createObserver(l),b=d.get(a)||[];return d.has(a)||d.set(a,b),b.push(o),p.observe(a),function(){b.splice(b.indexOf(o),1),b.length===0&&(d.delete(a),p.unobserve(a)),d.size===0&&(p.disconnect(),observerMap.delete(u))}}function useInView({threshold:a,delay:o,trackVisibility:l,rootMargin:c,root:u,triggerOnce:p,skip:d,initialInView:b,fallbackInView:P,onChange:E}={}){var N;const[ht,st]=reactExports.useState(null),nt=reactExports.useRef(E),[xt,ot]=reactExports.useState({inView:!!b,entry:void 0});nt.current=E,reactExports.useEffect(()=>{if(d||!ht)return;let mt;return mt=observe(ht,(St,At)=>{ot({inView:St,entry:At}),nt.current&&nt.current(St,At),At.isIntersecting&&p&&mt&&(mt(),mt=void 0)},{root:u,rootMargin:c,threshold:a,trackVisibility:l,delay:o},P),()=>{mt&&mt()}},[Array.isArray(a)?a.toString():a,ht,u,c,p,d,l,P,o]);const Et=(N=xt.entry)==null?void 0:N.target,ft=reactExports.useRef(void 0);!ht&&Et&&!p&&!d&&ft.current!==Et&&(ft.current=Et,ot({inView:!!b,entry:void 0}));const gt=[st,xt.inView,xt.entry];return gt.ref=gt[0],gt.inView=gt[1],gt.entry=gt[2],gt}const Reveal=({children:a,delay:o=0})=>{const{ref:l,inView:c}=useInView({triggerOnce:!0,threshold:.2});return jsxRuntimeExports.jsx(motion.div,{ref:l,initial:{opacity:0,y:50},animate:c?{opacity:1,y:0}:{},transition:{duration:.8,ease:"easeOut",delay:o},children:a})},Index=()=>jsxRuntimeExports.jsxs("div",{className:"flex flex-col min-h-screen",children:[jsxRuntimeExports.jsx(Navbar,{}),jsxRuntimeExports.jsxs("main",{className:"flex-grow",children:[jsxRuntimeExports.jsx("div",{className:"mt-20 md:mt-40",children:jsxRuntimeExports.jsx(Card3,{})}),jsxRuntimeExports.jsx(Reveal,{children:jsxRuntimeExports.jsx(About,{})}),jsxRuntimeExports.jsx(Reveal,{delay:.2,children:jsxRuntimeExports.jsx(Skills,{})}),jsxRuntimeExports.jsx(Reveal,{delay:.4,children:jsxRuntimeExports.jsx(Projects,{})}),jsxRuntimeExports.jsx("div",{className:"mb-40",children:jsxRuntimeExports.jsx(Reveal,{delay:.6,children:jsxRuntimeExports.jsx(Contact,{})})})]}),jsxRuntimeExports.jsx(Footer,{})]}),NotFound=()=>{const a=useLocation();return reactExports.useEffect(()=>{console.error("404 Error: User attempted to access non-existent route:",a.pathname)},[a.pathname]),jsxRuntimeExports.jsx("div",{className:"min-h-screen flex items-center justify-center bg-gray-100",children:jsxRuntimeExports.jsxs("div",{className:"text-center",children:[jsxRuntimeExports.jsx("h1",{className:"text-4xl font-bold mb-4",children:"404"}),jsxRuntimeExports.jsx("p",{className:"text-xl text-gray-600 mb-4",children:"Oops! Page not found"}),jsxRuntimeExports.jsx("a",{href:"/",className:"text-blue-500 hover:text-blue-700 underline",children:"Return to Home"})]})})},queryClient=new QueryClient,App=()=>jsxRuntimeExports.jsx(QueryClientProvider,{client:queryClient,children:jsxRuntimeExports.jsxs(TooltipProvider,{children:[jsxRuntimeExports.jsx(Toaster$1,{}),jsxRuntimeExports.jsx(Toaster,{}),jsxRuntimeExports.jsx(BrowserRouter,{basename:"/my_portfolio",children:jsxRuntimeExports.jsxs(Routes,{children:[jsxRuntimeExports.jsx(Route,{path:"/",element:jsxRuntimeExports.jsx(Index,{})}),jsxRuntimeExports.jsx(Route,{path:"*",element:jsxRuntimeExports.jsx(NotFound,{})})]})})]})});createRoot(document.getElementById("root")).render(jsxRuntimeExports.jsx(App,{}));
