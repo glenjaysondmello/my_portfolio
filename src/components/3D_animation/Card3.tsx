@@ -158,12 +158,25 @@ const StyledWrapper = styled.div`
     margin-top: 8px;
   }
 
+  @keyframes curbl {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .terminal_cursor {
-    display: block;
+    display: inline-block;
     height: 14px;
     width: 5px;
-    margin-left: 10px;
-    animation: curbl 1200ms linear infinite;
+    background-color: #1eff8e; /* Green color for visibility */
+    margin-left: 5px;
+    animation: curbl 0.8s infinite;
   }
 `;
 
