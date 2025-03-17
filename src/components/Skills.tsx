@@ -1,4 +1,3 @@
-import React from "react";
 import firebase from "/firebase-svgrepo-com.svg";
 import mongodb from "/mongo-svgrepo-com.svg";
 import express from "/express-svgrepo-com.svg";
@@ -6,27 +5,31 @@ import node from "/nodejs-icon-logo-svgrepo-com.svg";
 import fastapi from "/Fastapi--Streamline-Simple-Icons.svg";
 import java from "/java-svgrepo-com.svg";
 import mysql from "/mysql-svgrepo-com.svg";
+import postman from "/postman-icon-svgrepo-com.svg";
+import react from "/react-svgrepo-com.svg";
+import js from "/javascript-svgrepo-com.svg";
+import ts from "/typescript-svgrepo-com.svg";
+import linux from "/linux-tux-svgrepo-com.svg";
+import tailwind from "/tailwind-svgrepo-com.svg";
+import python from "/python-svgrepo-com.svg";
+import git from "/git-svgrepo-com.svg";
 
 const skills = [
   {
     name: "React.js",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    imgSrc: react,
   },
   {
     name: "Tailwind CSS",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+    imgSrc: tailwind,
   },
   {
     name: "TypeScript",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+    imgSrc: ts,
   },
   {
     name: "JavaScript",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    imgSrc: js,
   },
   { name: "Node.js", imgSrc: node },
   { name: "Express.js", imgSrc: express },
@@ -36,20 +39,19 @@ const skills = [
   { name: "MySQL", imgSrc: mysql },
   {
     name: "Git",
-    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+    imgSrc: git,
   },
   {
     name: "Linux",
-    imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png",
+    imgSrc: linux,
   },
   {
-    name: "Postman API",
-    imgSrc: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    name: "Postman",
+    imgSrc: postman,
   },
   {
     name: "Python",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+    imgSrc: python,
   },
   { name: "Java", imgSrc: java },
 ];
