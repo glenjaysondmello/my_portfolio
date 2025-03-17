@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { quantum } from "ldrs";
-import Loader1 from "./3D_animation/Loader1";
+import Loader1 from "./styled_components/Loader1";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

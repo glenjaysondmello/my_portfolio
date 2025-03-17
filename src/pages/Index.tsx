@@ -3,9 +3,9 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import Card3 from "@/components/3D_animation/Card3";
+import Card3 from "@/components/styled_components/Card3";
 import Footer from "@/components/Footer";
-import Reveal from "@/components/3D_animation/Reveal"; // Import Reveal component
+import Reveal from "@/components/styled_components/Reveal"; // Import Reveal component
 
 const Index = () => {
   return (
