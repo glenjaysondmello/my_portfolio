@@ -73,6 +73,8 @@ const Skills = () => {
               alt={name}
               className={`w-14 h-14 object-contain transition-transform duration-300 group-hover:opacity-30 ${
                 name === "FastAPI" ? "fastapi-green" : ""
+              }
+                ${name === "Express.js" ? "invert" : ""}
               }`}
             />
 
