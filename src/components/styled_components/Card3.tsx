@@ -75,7 +75,7 @@ const Card3 = () => {
                   href="/my_portfolio/resume.pdf" // replace with your actual file path
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="resume-btn inline-block px-4 py-2 mt-3 mb-3 text-sm font-semibold text-black bg-green-400 rounded hover:bg-green-500 transition"
+                  className="inline-block px-4 py-2 mt-3 mb-3 text-sm font-semibold text-white bg-black border border-gray-400 rounded hover:bg-gray-900 transition"
                 >
                   📄 View Resume
                 </a>
