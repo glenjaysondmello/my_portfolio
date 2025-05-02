@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { quantum } from "ldrs";
+// import { quantum } from "ldrs";
 import Loader1 from "./styled_components/Loader1";
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    quantum.register();
+    // quantum.register();
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
