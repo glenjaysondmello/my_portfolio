@@ -71,6 +71,17 @@ const Card3 = () => {
                 ></h3>
               </div>
               <div className="mt-2">
+                <a
+                  href="/my_portfolio/resume.pdf" // replace with your actual file path
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="resume-btn inline-block px-4 py-2 mt-3 mb-3 text-sm font-semibold text-black bg-green-400 rounded hover:bg-green-500 transition"
+                >
+                  📄 View Resume
+                </a>
+              </div>
+
+              <div className="mt-2">
                 <p className="text-gray-400">
                   📍 Dakshina Kannada, Karnataka, India
                 </p>
@@ -177,6 +188,20 @@ const StyledWrapper = styled.div`
     background-color: #1eff8e; /* Green color for visibility */
     margin-left: 5px;
     animation: curbl 0.8s infinite;
+  }
+
+  .resume-btn {
+    background-color: #1eff8e;
+    color: black;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .resume-btn:hover {
+    background-color: #00cc6a;
   }
 `;
 
