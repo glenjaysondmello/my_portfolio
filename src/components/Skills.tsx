@@ -2,7 +2,7 @@ import firebase from "/firebase-svgrepo-com.svg";
 import mongodb from "/mongo-svgrepo-com.svg";
 import express from "/express-svgrepo-com.svg";
 import node from "/nodejs-icon-logo-svgrepo-com.svg";
-import fastapi from "/Fastapi--Streamline-Simple-Icons.svg";
+// import fastapi from "/Fastapi--Streamline-Simple-Icons.svg";
 import java from "/java-svgrepo-com.svg";
 import mysql from "/mysql-svgrepo-com.svg";
 import postman from "/postman-icon-svgrepo-com.svg";
@@ -11,49 +11,34 @@ import js from "/javascript-svgrepo-com.svg";
 import ts from "/typescript-svgrepo-com.svg";
 import linux from "/linux-tux-svgrepo-com.svg";
 import tailwind from "/tailwind-svgrepo-com.svg";
-import python from "/python-svgrepo-com.svg";
+// import python from "/python-svgrepo-com.svg";
 import git from "/git-svgrepo-com.svg";
+import docker from "/docker-icon-svgrepo-com.svg";
+import redux from "/redux-svgrepo-com1.svg";
 
 const skills = [
-  {
-    name: "React.js",
-    imgSrc: react,
-  },
-  {
-    name: "Tailwind CSS",
-    imgSrc: tailwind,
-  },
-  {
-    name: "TypeScript",
-    imgSrc: ts,
-  },
-  {
-    name: "JavaScript",
-    imgSrc: js,
-  },
+  // Frontend
+  { name: "React.js", imgSrc: react },
+  { name: "TypeScript", imgSrc: ts },
+  { name: "JavaScript", imgSrc: js },
+  { name: "Tailwind CSS", imgSrc: tailwind },
+  { name: "Redux", imgSrc: redux },
+
+  // Backend
   { name: "Node.js", imgSrc: node },
   { name: "Express.js", imgSrc: express },
-  { name: "FastAPI", imgSrc: fastapi },
-  { name: "Firebase", imgSrc: firebase },
+  { name: "Java", imgSrc: java },
+
+  // Databases
   { name: "MongoDB", imgSrc: mongodb },
   { name: "MySQL", imgSrc: mysql },
-  {
-    name: "Git",
-    imgSrc: git,
-  },
-  {
-    name: "Linux",
-    imgSrc: linux,
-  },
-  {
-    name: "Postman",
-    imgSrc: postman,
-  },
-  {
-    name: "Python",
-    imgSrc: python,
-  },
-  { name: "Java", imgSrc: java },
+  { name: "Firebase", imgSrc: firebase },
+
+  // DevOps & Tools
+  { name: "Docker", imgSrc: docker },
+  { name: "Git", imgSrc: git },
+  { name: "Postman", imgSrc: postman },
+  { name: "Linux", imgSrc: linux },
 ];
 
 const Skills = () => {
