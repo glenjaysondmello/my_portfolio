@@ -12,6 +12,7 @@ const Card3 = () => {
       strings: [
         "MERN Stack Developer",
         "Full Stack Innovator",
+        "Flutter App Developer",
         "Aspiring AI Prompt Engineer",
       ],
       typeSpeed: 100,
@@ -72,7 +73,7 @@ const Card3 = () => {
               </div>
               <div className="mt-2">
                 <a
-                  href="/my_portfolio/resume.pdf"
+                  href="/my_portfolio/_resume_.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-4 py-2 mt-3 mb-3 text-sm font-semibold text-white bg-black border border-gray-400 rounded hover:bg-gray-900 transition"
