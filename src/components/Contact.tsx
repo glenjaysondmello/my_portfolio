@@ -1,8 +1,4 @@
-import { Mail } from "lucide-react";
-import UseAnimations from "react-useanimations";
-import github from "react-useanimations/lib/github";
-import linkedin from "react-useanimations/lib/linkedin";
-import instagram from "react-useanimations/lib/instagram";
+import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -43,7 +39,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-glow"
             >
-              <UseAnimations animation={github} size={28} strokeColor="white" />
+              <Github size={20} />
               <span>GitHub</span>
             </a>
 
@@ -54,11 +50,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-glow"
             >
-              <UseAnimations
-                animation={linkedin}
-                size={28}
-                strokeColor="white"
-              />
+              <Linkedin size={20} />
               <span>LinkedIn</span>
             </a>
 
@@ -69,21 +61,12 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="button-glow"
             >
-              <UseAnimations
-                animation={instagram}
-                size={28}
-                strokeColor="white"
-              />
+              <Instagram size={20} />
               <span>Instagram</span>
             </a>
           </div>
         </motion.div>
       </div>
-      {/* <p className="block lg:hidden mt-20 -mb-10 text-center text-white">
-        © {new Date().getFullYear()}{" "}
-        <span className="font-semibold text-blue-400">Glen Jayson Dmello</span>.
-        All rights reserved.
-      </p> */}
     </section>
   );
 };
