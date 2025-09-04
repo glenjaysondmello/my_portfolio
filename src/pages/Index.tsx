@@ -22,7 +22,7 @@ const Navbar = ({ activeSection, onSectionChange }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const sections = ["home", "about", "skills", "projects", "contact"];
+  const sections = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
     <header
@@ -33,7 +33,7 @@ const Navbar = ({ activeSection, onSectionChange }) => {
       <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo + Name */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-10">
             <Loader1 />
             <span className="text-xl font-display font-bold">
               Glen Jayson Dmello
@@ -94,11 +94,11 @@ const Navbar = ({ activeSection, onSectionChange }) => {
 };
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("Home");
 
   const renderActiveSection = () => {
     switch (activeSection) {
-      case "home":
+      case "Home":
         return (
           <Suspense
             fallback={
@@ -110,7 +110,7 @@ const Index = () => {
             <Card3 />
           </Suspense>
         );
-      case "about":
+      case "About":
         return (
           <Suspense
             fallback={
@@ -124,7 +124,7 @@ const Index = () => {
             </Reveal>
           </Suspense>
         );
-      case "skills":
+      case "Skills":
         return (
           <Suspense
             fallback={
@@ -138,7 +138,7 @@ const Index = () => {
             </Reveal>
           </Suspense>
         );
-      case "projects":
+      case "Projects":
         return (
           <Suspense
             fallback={
@@ -152,7 +152,7 @@ const Index = () => {
             </Reveal>
           </Suspense>
         );
-      case "contact":
+      case "Contact":
         return (
           <Suspense
             fallback={
@@ -200,7 +200,7 @@ const Index = () => {
         <main className="pt-16">{renderActiveSection()}</main>
 
         {/* Footer only visible on Contact */}
-        {activeSection === "contact" && <Footer />}
+        {activeSection === "Contact" && <Footer />}
       </Suspense>
     </div>
   );
