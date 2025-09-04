@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import firebase from "/firebase-svgrepo-com.svg";
 import mongodb from "/mongo-svgrepo-com.svg";
 import express from "/express-svgrepo-com.svg";
@@ -54,13 +55,34 @@ const Skills = () => {
     <section id="skills" className="py-20 text-white text-center">
       <h2 className="section-title mb-16">Skills</h2>
 
-      {/* 1. MODIFIED THIS LINE */}
-      <div className="flex flex-wrap justify-center gap-10 sm:grid sm:grid-cols-4 md:grid-cols-5">
+      {/* Grid Wrapper with stagger animation */}
+      <motion.div
+        className="flex flex-wrap justify-center gap-10 sm:grid sm:grid-cols-4 md:grid-cols-5"
+        initial="hidden"
+        animate="show"
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.1, // delay between each item
+            },
+          },
+        }}
+      >
         {skills.map(({ name, imgSrc }) => (
-          <div
+          <motion.div
             key={name}
-            // 2. MODIFIED THIS LINE
             className="relative flex w-20 flex-col items-center group sm:w-auto lg:px-10 md:px-8"
+            variants={{
+              hidden: { opacity: 0, scale: 0.8, y: 30 },
+              show: {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                transition: { duration: 0.5 },
+              },
+            }}
           >
             {/* Skill Icon */}
             <img
@@ -68,18 +90,16 @@ const Skills = () => {
               alt={name}
               className={`w-14 h-14 object-contain transition-transform duration-300 group-hover:opacity-30 ${
                 name === "FastAPI" ? "fastapi-green" : ""
-              }
-                ${name === "Express.js" ? "invert" : ""}
-              }`}
+              } ${name === "Express.js" ? "invert" : ""}`}
             />
 
             {/* Hover Effect (Text Above Icon) */}
             <span className="absolute bottom-12 opacity-0 group-hover:opacity-100 group-hover:-translate-y-3 transition-all duration-300 text-emerald-400 text-sm font-semibold bg-black/80 px-3 py-1 rounded-md shadow-lg">
               {name}
             </span>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

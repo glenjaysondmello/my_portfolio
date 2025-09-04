@@ -1,6 +1,8 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import Loader1 from "@/components/styled_components/Loader1";
+import { BouncyArc } from "ldrs/react";
 
-const Navbar = lazy(() => import("@/components/Navbar"));
 const About = lazy(() => import("@/components/About"));
 const Skills = lazy(() => import("@/components/Skills"));
 const Projects = lazy(() => import("@/components/Projects"));
@@ -9,37 +11,196 @@ const Card3 = lazy(() => import("@/components/styled_components/Card3"));
 const Footer = lazy(() => import("@/components/Footer"));
 const Reveal = lazy(() => import("@/components/styled_components/Reveal"));
 
-const Index = () => {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
+// Navbar with scroll effect and mobile toggle
+const Navbar = ({ activeSection, onSectionChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-        {/* Main content */}
-        <main className="flex-grow">
-          <div className="mt-20 md:mt-40">
-            <Card3 />
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const sections = ["home", "about", "skills", "projects", "contact"];
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : ""
+      }`}
+    >
+      <nav className="container mx-auto px-4 py-2">
+        <div className="flex items-center justify-between">
+          {/* Logo + Name */}
+          <div className="flex items-center gap-4">
+            <Loader1 />
+            <span className="text-xl font-display font-bold">
+              Glen Jayson Dmello
+            </span>
           </div>
 
-          {/* Animate Sections on Scroll */}
-          <Reveal>
-            <About />
-          </Reveal>
-          <Reveal delay={0.2}>
-            <Skills />
-          </Reveal>
-          <Reveal delay={0.4}>
-            <Projects />
-          </Reveal>
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden mr-3"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
 
-          <div className="mb-40">
+          {/* Desktop menu */}
+          <div className="hidden md:flex gap-8 mr-6">
+            {sections.map((section) => (
+              <button
+                key={section}
+                onClick={() => onSectionChange(section)}
+                className={`capitalize nav-link ${
+                  activeSection === section ? "text-blue-600 font-semibold" : ""
+                }`}
+              >
+                {section}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile dropdown menu */}
+        {isOpen && (
+          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b md:hidden animate-fade-down">
+            <div className="container mx-auto px-6 py-4">
+              {sections.map((section) => (
+                <button
+                  key={section}
+                  onClick={() => {
+                    onSectionChange(section);
+                    setIsOpen(false);
+                  }}
+                  className={`block py-2 w-full text-left nav-link ${
+                    activeSection === section
+                      ? "text-blue-600 font-semibold"
+                      : ""
+                  }`}
+                >
+                  {section}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+};
+
+const Index = () => {
+  const [activeSection, setActiveSection] = useState("home");
+
+  const renderActiveSection = () => {
+    switch (activeSection) {
+      case "home":
+        return (
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center min-h-screen">
+                <BouncyArc size="70" speed="1.65" color="black" />
+              </div>
+            }
+          >
+            <Card3 />
+          </Suspense>
+        );
+      case "about":
+        return (
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center min-h-screen">
+                <BouncyArc size="70" speed="1.65" color="black" />
+              </div>
+            }
+          >
+            <Reveal>
+              <About />
+            </Reveal>
+          </Suspense>
+        );
+      case "skills":
+        return (
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center min-h-screen">
+                <BouncyArc size="70" speed="1.65" color="black" />
+              </div>
+            }
+          >
+            <Reveal delay={0.2}>
+              <Skills />
+            </Reveal>
+          </Suspense>
+        );
+      case "projects":
+        return (
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center min-h-screen">
+                <BouncyArc size="70" speed="1.65" color="black" />
+              </div>
+            }
+          >
+            <Reveal delay={0.4}>
+              <Projects />
+            </Reveal>
+          </Suspense>
+        );
+      case "contact":
+        return (
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center min-h-screen">
+                <BouncyArc size="70" speed="1.65" color="black" />
+              </div>
+            }
+          >
             <Reveal delay={0.6}>
               <Contact />
             </Reveal>
-          </div>
-        </main>
+          </Suspense>
+        );
+      default:
+        return (
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center min-h-screen">
+                <BouncyArc size="70" speed="1.65" color="black" />
+              </div>
+            }
+          >
+            <Card3 />
+          </Suspense>
+        );
+    }
+  };
 
-        <Footer />
+  return (
+    <div className="min-h-screen">
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center min-h-screen">
+            <BouncyArc size="70" speed="1.65" color="black" />
+          </div>
+        }
+      >
+        {/* Navbar with scroll + mobile toggle */}
+        <Navbar
+          activeSection={activeSection}
+          onSectionChange={setActiveSection}
+        />
+
+        {/* Main content */}
+        <main className="pt-16">{renderActiveSection()}</main>
+
+        {/* Footer only visible on Contact */}
+        {activeSection === "contact" && <Footer />}
       </Suspense>
     </div>
   );
