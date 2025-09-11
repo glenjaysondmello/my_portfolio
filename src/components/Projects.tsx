@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   FaGithub,
   FaCalendarAlt,
@@ -123,50 +122,20 @@ const Projects = () => {
     <section id="projects" className="py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="section-title text-3xl md:text-4xl font-bold text-white tracking-tight"
-          >
+          <h2 className="section-title text-3xl md:text-4xl font-bold text-white tracking-tight">
             Projects & Creations
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-lg text-slate-400 mt-3 max-w-2xl mx-auto"
-          >
+          </h2>
+          <p className="text-lg text-slate-400 mt-3 max-w-2xl mx-auto">
             A selection of projects that showcase my passion for building and
             problem-solving.
-          </motion.p>
+          </p>
         </div>
 
         {/* --- Projects Grid --- */}
-        <motion.div
-          className="grid grid-cols-1 gap-10 max-w-5xl mx-auto"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.2 } },
-          }}
-        >
+        <div className="grid grid-cols-1 gap-10 max-w-5xl mx-auto">
           {PROJECTS.map((project, idx) => (
-            <motion.div
+            <div
               key={idx}
-              variants={{
-                hidden: { opacity: 0, y: 40, scale: 0.95 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  transition: { duration: 0.6, ease: "easeOut" },
-                },
-              }}
               className="group relative bg-slate-800/40 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500"
             >
               {/* Thumbnail with Overlay */}
@@ -243,22 +212,11 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
 
           {/* --- More Projects Card --- */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 50, scale: 0.95 },
-              show: {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                transition: { duration: 0.6, ease: "easeOut" },
-              },
-            }}
-            className="flex flex-col items-center justify-center text-center bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-10 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-purple-500/10"
-          >
+          <div className="flex flex-col items-center justify-center text-center bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-10 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-purple-500/10">
             <GoMortarBoard className="text-5xl text-blue-400 mb-4" />
             <h3 className="text-2xl font-bold text-white mb-2">
               Want to see more?
@@ -276,8 +234,8 @@ const Projects = () => {
               <FaGithub />
               View My GitHub
             </a>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
