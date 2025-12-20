@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import Snowfall from "react-snowfall";
 
 const Navbar = lazy(() => import("@/components/Navbar"));
 const About = lazy(() => import("@/components/About"));
@@ -12,6 +13,34 @@ const Reveal = lazy(() => import("@/components/styled_components/Reveal"));
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <Snowfall
+        // Soft, natural snow color (pure white looks artificial)
+        color="#e6ecff"
+        // Density: realistic, not overwhelming
+        snowflakeCount={180}
+        // Size variation (very important)
+        radius={[0.6, 3.2]}
+        // Vertical falling speed (slow & smooth)
+        speed={[0.5, 2.2]}
+        // Horizontal wind drift
+        wind={[-0.6, 1.2]}
+        // Wind + speed change frequency
+        changeFrequency={180}
+        // Depth illusion
+        opacity={[0.4, 1]}
+        // Subtle rotation
+        rotationSpeed={[-0.6, 0.6]}
+        // Enables leaf-like 3D tumbling (looks premium)
+        enable3DRotation={true}
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          pointerEvents: "none", // IMPORTANT
+          zIndex: 50, // adjust if needed
+        }}
+      />
+
       <Suspense fallback={<div>Loading...</div>}>
         <Navbar />
 
