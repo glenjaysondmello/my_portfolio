@@ -17,11 +17,11 @@ const Index = () => {
         // Soft, natural snow color (pure white looks artificial)
         color="#e6ecff"
         // Density: realistic, not overwhelming
-        snowflakeCount={180}
+        snowflakeCount={60}
         // Size variation (very important)
         radius={[0.6, 3.2]}
         // Vertical falling speed (slow & smooth)
-        speed={[0.5, 2.2]}
+        speed={[0.3, 2.2]}
         // Horizontal wind drift
         wind={[-0.6, 1.2]}
         // Wind + speed change frequency
